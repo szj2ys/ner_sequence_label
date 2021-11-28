@@ -23,7 +23,6 @@ demo*
 *test.py
 test*
 datasets/results/*.csv
-datasets/*.csv
 datasets/models/*.h5
 datasets/models/*.model
 
