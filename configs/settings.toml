@@ -1,0 +1,47 @@
+# This is the BASE env
+# the values from [default] will be always loaded and used as default values
+[development]
+message = 'This is in development env'
+
+parameters = {enabled=true, number=42}
+money = 500.5
+age = 42.0
+enabled = "@bool true"
+
+log_level = 'DEBUG'
+
+create_table = "@bool false"
+drop_table = "@bool false"
+
+    [development.mail]
+    host="smtpdm.aliyun.com"
+    port=80
+    user="elkmonitor@kaisasecurities.site"
+    passwd="Sz0a3ncf2c2ZFbLj"
+    # 接收邮箱
+    receivers = [
+    "songzhij@kaisagroup.com",  # 宋志军
+    ]
+
+
+
+
+# If other env is set by ENV_FOR_DYNACONF env var
+# or switch using settings.env or settings.using_env
+# then the [prod] values will be overwritten with:
+
+
+# When ENV_FOR_DYNACONF=production
+[production]
+message = 'This is in production env'
+
+log_level = 'INFO'
+
+    [production.mail]
+    host="smtpdm.aliyun.com"
+    port=80
+    user="elkmonitor@kaisasecurities.site"
+    passwd="Sz0a3ncf2c2ZFbLj"
+
+
+
